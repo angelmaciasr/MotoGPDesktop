@@ -6,8 +6,9 @@
   Background: #defdff (baby blue)
   Text: #315673 (midnight blue)
   Titles: #2A4961 (blue gray)
-  Links: #911D91 (dark purple)
+  Links: #2A4961 (dark purple)
   Links hover: #821A6A (darker purple)
+  Links visited: #911D91 (black)
   Table borders: #0e86d4 (blue grotto)
 */
 
@@ -31,15 +32,18 @@ h3 {
 
 /* Especificidad 001 */
 a {
-  color: #911d91; /* dark purple */
+  color: #2a4961; /* dark purple */
   text-decoration: none;
 }
 
 /* Especificidad 011, 011 */
 a:hover,
 a:focus {
-  color: #821a6a; /* bright purple */
+  color: #821a6a; /* darker purple */
   text-decoration: underline;
+}
+a:visited {
+  color: #911d91;
 }
 
 /* Especificidad 001 */
@@ -61,5 +65,5 @@ td {
 }
 
 p:first-of-type {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
