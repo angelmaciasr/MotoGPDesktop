@@ -1,0 +1,64 @@
+/* Ángel Macías Rodríguez -- UO289362 */
+
+/* Estilos generales del proyecto MotoGP Desktop*/
+
+/* COLORES USADOS:
+  Background: #defdff (baby blue)
+  Text: #315673 (midnight blue)
+  Titles: #2A4961 (blue gray)
+  Links: #911D91 (dark purple)
+  Links hover: #821A6A (darker purple)
+  Table borders: #0e86d4 (blue grotto)
+*/
+
+/*
+color de fondo azul claro (baby blue) #defdff
+color de texto azul fuerte para alto contraste (midnight blue) #315673
+títulos enfatizados mediante propiedad css
+/*
+
+
+/* Especificidad 001 */
+body {
+  background-color: #defdff; /* Baby blue */
+  color: #315673; /* Midnight blue */
+  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Tahoma, sans-serif;
+  font-size: 1.15rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Especificidad 001, 001 */
+h1,
+h2,
+h3 {
+  color: #2a4961; /* Blue gray */
+}
+
+/* Especificidad 001 */
+a {
+  color: #911d91; /* dark purple */
+  text-decoration: none;
+}
+
+/* Especificidad 011, 011 */
+a:hover,
+a:focus {
+  color: #821a6a; /* bright purple */
+  text-decoration: underline;
+}
+
+/* Especificidad 001 */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Especificidad 001, 001 */
+th,
+td {
+  border: 2px solid #0e86d4; /* Blue grotto */
+  padding: 0.5rem;
+  text-align: left;
+}
