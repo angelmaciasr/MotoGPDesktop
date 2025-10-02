@@ -11,13 +11,6 @@
   Table borders: #0e86d4 (blue grotto)
 */
 
-/*
-color de fondo azul claro (baby blue) #defdff
-color de texto azul fuerte para alto contraste (midnight blue) #315673
-títulos enfatizados mediante propiedad css
-/*
-
-
 /* Especificidad 001 */
 body {
   background-color: #defdff; /* Baby blue */
@@ -60,5 +53,9 @@ th,
 td {
   border: 2px solid #0e86d4; /* Blue grotto */
   padding: 0.5rem;
-  text-align: left;
+  text-align: center;
+}
+
+.active {
+  font-weight: bold;
 }
