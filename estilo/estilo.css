@@ -59,3 +59,7 @@ td {
 .active {
   font-weight: bold;
 }
+
+p:first-of-type {
+  font-size: 0.8rem;
+}
