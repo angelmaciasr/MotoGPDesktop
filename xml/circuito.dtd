@@ -1,0 +1,50 @@
+<!ELEMENT circuito (longitud, anchura, localizacion, referencias, g_fotos, g_videos, punto_origen, puntos_circuito, vencedor, clasificados)>
+<!ATTLIST circuito nombre CDATA #REQUIRED>
+<!ATTLIST circuito n_vueltas CDATA #REQUIRED>
+<!ATTLIST circuito patrocinador CDATA #REQUIRED>
+<!ATTLIST circuito fecha CDATA #REQUIRED>
+<!ATTLIST circuito hora CDATA #REQUIRED>
+
+<!ELEMENT longitud (#PCDATA)>
+<!ATTLIST longitud unidad CDATA #REQUIRED>
+
+<!ELEMENT anchura (#PCDATA)>
+<!ATTLIST anchura unidad CDATA #REQUIRED>
+
+<!ELEMENT localizacion (localidad_proxima)>
+<!ELEMENT localidad_proxima (#PCDATA)>
+<!ATTLIST localidad_proxima pais CDATA #REQUIRED>
+
+<!ELEMENT referencias (referencia+)>
+<!ELEMENT referencia (#PCDATA)>
+
+<!ELEMENT g_fotos (foto+)>
+<!ELEMENT foto (#PCDATA)>
+<!ATTLIST foto source CDATA #REQUIRED>
+<!ATTLIST foto alt CDATA #REQUIRED>
+
+<!ELEMENT g_videos (video+)>
+<!ELEMENT video (#PCDATA)>
+<!ATTLIST video source CDATA #REQUIRED>
+<!ATTLIST video type CDATA #REQUIRED>
+
+<!ELEMENT punto_origen (longitud_origen, latitud_origen, altitud_origen)>
+<!ELEMENT longitud_origen (#PCDATA)>
+<!ELEMENT latitud_origen (#PCDATA)>
+<!ELEMENT altitud_origen (#PCDATA)>
+
+<!ELEMENT puntos_circuito (punto+)>
+<!ELEMENT punto (longitud_punto, latitud_punto, altitud_punto)>
+<!ATTLIST punto distancia CDATA #REQUIRED>
+<!ATTLIST punto sector CDATA #REQUIRED>
+<!ELEMENT longitud_punto (#PCDATA)>
+<!ELEMENT latitud_punto (#PCDATA)>
+<!ELEMENT altitud_punto (#PCDATA)>
+
+<!ELEMENT vencedor (#PCDATA)>
+<!ATTLIST vencedor tiempo CDATA #REQUIRED>
+
+<!ELEMENT clasificados (piloto+)>
+<!ELEMENT piloto (#PCDATA)>
+<!ATTLIST piloto posicion CDATA #REQUIRED>
+<!ATTLIST piloto puntos CDATA #REQUIRED>

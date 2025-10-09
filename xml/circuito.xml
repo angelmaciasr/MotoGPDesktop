@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circuito SYSTEM "circuito.dtd">
+<circuito nombre="Phillip Island Grand Prix Circuit" n_vueltas="27" patrocinador="Australian Motorcycle Grand Prix" 
+  fecha="2024-10-20" hora="14:00">
+  <longitud unidad="m">4448</longitud>
+  <anchura unidad="m">12</anchura>
+  <localizacion>
+    <localidad_proxima pais="Australia">Phillip Island, Victoria</localidad_proxima>
+  </localizacion>
+  <referencias>
+    <referencia>Circuito de Phillip Island</referencia>
+    <referencia>Phillip Island Circuit</referencia>
+    <referencia>Gran Premio de Australia de MotoGP</referencia>
+  </referencias>
+  <g_fotos>
+    <foto source="../multimedia/phillip-island-circuit.jpg" alt="Vista aérea del circuito de Phillip Island">Vista aérea del circuito</foto>
+    <foto source="../multimedia/phillip-island-turn1.jpg" alt="Curva 1 del circuito de Phillip Island">Curva 1 - Gardner Straight</foto>
+    <foto source="../multimedia/phillip-island-main.jpg" alt="Recta principal del circuito de Phillip Island">Recta principal</foto>
+  </g_fotos>
+  <g_videos>
+    <video source="../multimedia/phillip-island-lap.mp4" type="video/mp4">Vuelta onboard al circuito</video>
+    <video source="../multimedia/phillip-island-lap.webm" type="video/webm">Highlights del circuito</video>
+  </g_videos>
+  <punto_origen>
+    <longitud_origen>145.2369</longitud_origen>
+    <latitud_origen>-38.5047</latitud_origen>
+    <altitud_origen>15</altitud_origen>
+  </punto_origen>
+  <puntos_circuito>
+    <punto distancia="0" sector="1">
+      <longitud_punto>145.2369</longitud_punto>
+      <latitud_punto>-38.5047</latitud_punto>
+      <altitud_punto>15</altitud_punto>
+    </punto>
+    <punto distancia="0.2" sector="1">
+      <longitud_punto>145.2372</longitud_punto>
+      <latitud_punto>-38.5038</latitud_punto>
+      <altitud_punto>16</altitud_punto>
+    </punto>
+    <punto distancia="0.8" sector="1">
+      <longitud_punto>145.2398</longitud_punto>
+      <latitud_punto>-38.5012</latitud_punto>
+      <altitud_punto>18</altitud_punto>
+    </punto>
+    <punto distancia="1.2" sector="1">
+      <longitud_punto>145.2412</longitud_punto>
+      <latitud_punto>-38.4998</latitud_punto>
+      <altitud_punto>20</altitud_punto>
+    </punto>
+    <punto distancia="1.8" sector="1">
+      <longitud_punto>145.2431</longitud_punto>
+      <latitud_punto>-38.4989</latitud_punto>
+      <altitud_punto>22</altitud_punto>
+    </punto>
+    <punto distancia="2.4" sector="2">
+      <longitud_punto>145.2458</longitud_punto>
+      <latitud_punto>-38.4976</latitud_punto>
+      <altitud_punto>25</altitud_punto>
+    </punto>
+    <punto distancia="3.0" sector="2">
+      <longitud_punto>145.2482</longitud_punto>
+      <latitud_punto>-38.4967</latitud_punto>
+      <altitud_punto>28</altitud_punto>
+    </punto>
+    <punto distancia="3.6" sector="2">
+      <longitud_punto>145.2501</longitud_punto>
+      <latitud_punto>-38.4958</latitud_punto>
+      <altitud_punto>30</altitud_punto>
+    </punto>
+    <punto distancia="4.0" sector="3">
+      <longitud_punto>145.2523</longitud_punto>
+      <latitud_punto>-38.4949</latitud_punto>
+      <altitud_punto>32</altitud_punto>
+    </punto>
+    <punto distancia="4.4" sector="3">
+      <longitud_punto>145.2365</longitud_punto>
+      <latitud_punto>-38.5042</latitud_punto>
+      <altitud_punto>15</altitud_punto>
+    </punto>
+  </puntos_circuito>
+  <vencedor tiempo="1:30.712">Francesco Bagnaia</vencedor>
+  <clasificados>
+    <piloto posicion="1" puntos="25">Francesco Bagnaia</piloto>
+    <piloto posicion="2" puntos="20">Jorge Martín</piloto>
+    <piloto posicion="3" puntos="16">Marc Márquez</piloto>
+  </clasificados>
+</circuito>
