@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <link rel="icon" href="multimedia/favicon-meteorologia.ico" />
+    <script src="js/ciudad.js"></script>
   </head>
   <body>
     <header>
@@ -38,6 +39,19 @@
 
     <h2>Sección de Meteorología</h2>
 
-    <p>En desarrollo</p>
+    <script>
+      var ciudad = new Ciudad(
+        "Phillip Island",
+        "Australia",
+        "Phillip Islander"
+      );
+      ciudad.fillCityAttr(13799, { lat: -38.5, lng: 145.0 });
+      document.write(`<p>Nombre de la ciudad: ${ciudad.getCityName()}</p>`);
+      document.write(`<p>Nombre del país: ${ciudad.getCountryName()}</p>`);
+      document.write(
+        `<p>Información adicional: ${ciudad.getCityAdditionalInfo()}</p>`
+      );
+      ciudad.writeCityCoords();
+    </script>
   </body>
 </html>
