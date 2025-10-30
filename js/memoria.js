@@ -9,6 +9,9 @@ class Memoria {
     this.barajarCartas();
 
     this.tablero_bloqueado = false;
+
+    this.cronometro = new Cronometro();
+    this.cronometro.arrancar();
   }
 
   voltearCarta(carta) {
@@ -70,7 +73,7 @@ class Memoria {
     });
 
     if (finished) {
-      console.log("¡Felicidades! Has ganado el juego.");
+      this.cronometro.parar();
     }
   }
 

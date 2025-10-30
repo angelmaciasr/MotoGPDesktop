@@ -9,6 +9,10 @@ main > h2 {
   grid-column: 1 / -1;
 }
 
+main > p {
+  grid-column: 1 / -1;
+}
+
 @media (max-width: 799px) {
   main {
     grid-template-columns: repeat(2, 1fr);
