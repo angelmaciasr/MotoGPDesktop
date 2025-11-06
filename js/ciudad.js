@@ -1,10 +1,14 @@
 "use strict";
 
 class Ciudad {
+  #nombre;
+  #pais;
+  #gentilicio;
+
   constructor(nombre, pais, gentilicio) {
-    this.nombre = nombre;
-    this.pais = pais;
-    this.gentilicio = gentilicio;
+    this.#nombre = nombre;
+    this.#pais = pais;
+    this.#gentilicio = gentilicio;
 
     this.cantidad_poblacion;
     this.coord_punto_central;
@@ -16,16 +20,16 @@ class Ciudad {
   }
 
   getCityName() {
-    return this.nombre;
+    return this.#nombre;
   }
 
   getCountryName() {
-    return this.pais;
+    return this.#pais;
   }
 
   getCityAdditionalInfo() {
     return `<ul>
-      <li>Gentilicio: ${this.gentilicio}</li>
+      <li>Gentilicio: ${this.#gentilicio}</li>
       <li>Población: ${this.cantidad_poblacion}</li>
     </ul>`;
   }

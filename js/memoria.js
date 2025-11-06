@@ -1,38 +1,42 @@
 "use strict";
 
 class Memoria {
+  #tablero_bloqueado;
+  #primera_carta;
+  #segunda_carta;
+
   constructor() {
-    this.tablero_bloqueado = true;
-    this.primera_carta = null;
-    this.segunda_carta = null;
+    this.#tablero_bloqueado = true;
+    this.#primera_carta = null;
+    this.#segunda_carta = null;
 
-    this.barajarCartas();
+    this.#barajarCartas();
 
-    this.tablero_bloqueado = false;
+    this.#tablero_bloqueado = false;
 
     this.cronometro = new Cronometro();
     this.cronometro.arrancar();
 
-    this.addEventos();
+    this.#addEventos();
   }
 
-  voltearCarta(carta) {
-    if (this.tablero_bloqueado) return;
+  #voltearCarta(carta) {
+    if (this.#tablero_bloqueado) return;
     if (carta.dataset.estado === "volteada") return;
     if (carta.dataset.estado === "revelada") return;
 
     carta.dataset.estado = "volteada";
 
-    if (this.primera_carta === null) {
-      this.primera_carta = carta;
+    if (this.#primera_carta === null) {
+      this.#primera_carta = carta;
       return;
     }
 
-    this.segunda_carta = carta;
-    this.comprobarPareja();
+    this.#segunda_carta = carta;
+    this.#comprobarPareja();
   }
 
-  barajarCartas() {
+  #barajarCartas() {
     const main = document.querySelector("main");
     const cartas = Array.from(document.querySelectorAll("main article"));
 
@@ -46,23 +50,23 @@ class Memoria {
     });
   }
 
-  reiniciarAtributos() {
-    this.tablero_bloqueado = false;
-    this.primera_carta = null;
-    this.segunda_carta = null;
+  #reiniciarAtributos() {
+    this.#tablero_bloqueado = false;
+    this.#primera_carta = null;
+    this.#segunda_carta = null;
   }
 
-  deshabilitarCartas() {
-    this.primera_carta.dataset.estado = "revelada";
+  #deshabilitarCartas() {
+    this.#primera_carta.dataset.estado = "revelada";
 
-    this.segunda_carta.dataset.estado = "revelada";
+    this.#segunda_carta.dataset.estado = "revelada";
 
-    this.reiniciarAtributos();
+    this.#reiniciarAtributos();
 
-    this.comprobarJuego();
+    this.#comprobarJuego();
   }
 
-  comprobarJuego() {
+  #comprobarJuego() {
     const cartas = document.querySelectorAll("main article");
 
     var finished = true;
@@ -79,29 +83,29 @@ class Memoria {
     }
   }
 
-  cubrirCartas() {
-    this.tablero_bloqueado = true;
+  #cubrirCartas() {
+    this.#tablero_bloqueado = true;
 
     setTimeout(() => {
-      this.primera_carta.dataset.estado = null;
-      this.segunda_carta.dataset.estado = null;
-      this.reiniciarAtributos();
+      this.#primera_carta.dataset.estado = null;
+      this.#segunda_carta.dataset.estado = null;
+      this.#reiniciarAtributos();
     }, 1500);
   }
 
-  comprobarPareja() {
-    this.primera_carta.children[1].getAttribute("alt") ===
-    this.segunda_carta.children[1].getAttribute("alt")
-      ? this.deshabilitarCartas()
-      : this.cubrirCartas();
+  #comprobarPareja() {
+    this.#primera_carta.children[1].getAttribute("alt") ===
+    this.#segunda_carta.children[1].getAttribute("alt")
+      ? this.#deshabilitarCartas()
+      : this.#cubrirCartas();
   }
 
-  addEventos() {
+  #addEventos() {
     const cartas = Array.from(document.querySelectorAll("main article"));
 
     cartas.forEach((carta) => {
       carta.addEventListener("click", () => {
-        this.voltearCarta(carta);
+        this.#voltearCarta(carta);
       });
     });
   }

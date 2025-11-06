@@ -1,8 +1,10 @@
 "use strict";
 
 class Cronometro {
+  #tiempo;
+
   constructor() {
-    this.tiempo = 0;
+    this.#tiempo = 0;
   }
 
   arrancar() {
@@ -15,21 +17,21 @@ class Cronometro {
 
     console.log("Cronómetro arrancado en:", this.inicio);
 
-    this.corriendo = setInterval(this.actualizar.bind(this), 100);
+    this.corriendo = setInterval(this.#actualizar.bind(this), 100);
   }
 
-  actualizar() {
+  #actualizar() {
     var now = Date.now();
 
-    this.tiempo = now - this.inicio;
+    this.#tiempo = now - this.inicio;
 
-    this.mostrar();
+    this.#mostrar();
   }
 
-  mostrar() {
+  #mostrar() {
     // mm:ss.s
-    const minutos = parseInt(this.tiempo / 60000);
-    const segundos = ((this.tiempo % 60000) / 1000).toFixed(1);
+    const minutos = parseInt(this.#tiempo / 60000);
+    const segundos = ((this.#tiempo % 60000) / 1000).toFixed(1);
 
     const dateString = `${String(minutos).padStart(2, "0")}:${String(
       segundos
@@ -47,9 +49,9 @@ class Cronometro {
   reiniciar() {
     this.parar();
 
-    this.tiempo = 0;
+    this.#tiempo = 0;
 
-    this.mostrar();
+    this.#mostrar();
   }
 
   addEventos() {
