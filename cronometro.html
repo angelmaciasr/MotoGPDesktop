@@ -38,18 +38,19 @@
       <strong>Cronometro</strong>
     </p>
 
-    <script>
-      var cron = new Cronometro();
-    </script>
-
     <main>
       <p>00:00.0</p>
 
-      <button onclick="cron.arrancar()">Arrancar</button>
+      <button>Arrancar</button>
 
-      <button onclick="cron.parar()">Parar</button>
+      <button>Parar</button>
 
-      <button onclick="cron.reiniciar()">Reiniciar</button>
+      <button>Reiniciar</button>
+
+      <script>
+        var cron = new Cronometro();
+        cron.addEventos();
+      </script>
     </main>
   </body>
 </html>

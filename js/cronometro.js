@@ -51,4 +51,20 @@ class Cronometro {
 
     this.mostrar();
   }
+
+  addEventos() {
+    const botones = document.querySelectorAll("main button");
+
+    botones[0].addEventListener("click", () => {
+      this.arrancar();
+    });
+
+    botones[1].addEventListener("click", () => {
+      this.parar();
+    });
+
+    botones[2].addEventListener("click", () => {
+      this.reiniciar();
+    });
+  }
 }

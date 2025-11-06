@@ -12,6 +12,8 @@ class Memoria {
 
     this.cronometro = new Cronometro();
     this.cronometro.arrancar();
+
+    this.addEventos();
   }
 
   voltearCarta(carta) {
@@ -92,5 +94,15 @@ class Memoria {
     this.segunda_carta.children[1].getAttribute("alt")
       ? this.deshabilitarCartas()
       : this.cubrirCartas();
+  }
+
+  addEventos() {
+    const cartas = Array.from(document.querySelectorAll("main article"));
+
+    cartas.forEach((carta) => {
+      carta.addEventListener("click", () => {
+        this.voltearCarta(carta);
+      });
+    });
   }
 }
