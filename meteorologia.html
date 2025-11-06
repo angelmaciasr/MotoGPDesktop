@@ -45,12 +45,23 @@
         "Australia",
         "Phillip Islander"
       );
-      ciudad.fillCityAttr(13799, { lat: -38.5, lng: 145.0 });
-      document.write(`<p>Nombre de la ciudad: ${ciudad.getCityName()}</p>`);
-      document.write(`<p>Nombre del país: ${ciudad.getCountryName()}</p>`);
-      document.write(
-        `<p>Información adicional: ${ciudad.getCityAdditionalInfo()}</p>`
-      );
+      ciudad.fillCityAttr(13799, { lat: -38.486772, lng: 145.231326 });
+
+      //nombre
+      const nombre = document.createElement("p");
+      nombre.innerText = `Nombre de la ciudad: ${ciudad.getCityName()}`;
+      document.body.appendChild(nombre);
+
+      //país
+      const pais = document.createElement("p");
+      pais.innerText = `Nombre del país: ${ciudad.getCountryName()}`;
+      document.body.appendChild(pais);
+
+      //info adicional
+      const infoAdicional = document.createElement("p");
+      infoAdicional.innerHTML = `Información adicional: ${ciudad.getCityAdditionalInfo()}`;
+      document.body.appendChild(infoAdicional);
+
       ciudad.writeCityCoords();
     </script>
   </body>

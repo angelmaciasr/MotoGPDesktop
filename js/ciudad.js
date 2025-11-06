@@ -31,8 +31,15 @@ class Ciudad {
   }
 
   writeCityCoords() {
-    document.write(
-      `<p>Coordenadas: ${this.coord_punto_central.lat}, ${this.coord_punto_central.lng}</p>`
-    );
+    const p = document.createElement("p");
+
+    p.innerText = `Coordenadas: ${this.coord_punto_central.lat}, ${this.coord_punto_central.lng}`;
+
+    document.body.appendChild(p);
+
+    // DOCUMENT WRITE REPLACED
+    // document.write(
+    //   `<p>Coordenadas: ${this.coord_punto_central.lat}, ${this.coord_punto_central.lng}</p>`
+    // );
   }
 }
