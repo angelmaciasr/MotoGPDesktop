@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <circuito xmlns="http://www.uniovi.es" nombre="Phillip Island Grand Prix Circuit" n_vueltas="27"
   patrocinador="Australian Motorcycle Grand Prix"
-  fecha="2024-10-20" hora="14:00">
+  fecha="2025-10-19" hora="16:00">
   <longitud unidad="m">4448</longitud>
   <anchura unidad="m">12</anchura>
   <localizacion>
@@ -253,10 +253,10 @@
     </punto>
 
   </puntos_circuito>
-  <vencedor tiempo="1:30.712">Francesco Bagnaia</vencedor>
+  <vencedor tiempo="00:37:49.571">Raúl Fernández</vencedor>
   <clasificados>
-    <piloto posicion="1" puntos="25">Francesco Bagnaia</piloto>
-    <piloto posicion="2" puntos="20">Jorge Martín</piloto>
-    <piloto posicion="3" puntos="16">Marc Márquez</piloto>
+    <piloto posicion="1" puntos="25">Raúl Fernández</piloto>
+    <piloto posicion="2" puntos="20">Fabio Di Giannantonio</piloto>
+    <piloto posicion="3" puntos="16">Marco Bezzechi</piloto>
   </clasificados>
 </circuito>
