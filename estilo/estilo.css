@@ -59,13 +59,13 @@ td {
   padding: 0.5rem;
   text-align: center;
 }
-+/* Especificidad */
+/* Especificidad */
 .active {
   font-weight: bold;
 }
 
 /* Especificidad */
-body:n-th-child(1) {
-  //selector específico para las migas
+body:nth-child(1) {
+  /* selector específico para las migas */
   font-size: 0.9rem;
 }

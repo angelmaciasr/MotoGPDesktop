@@ -39,10 +39,14 @@ nav {
     width: 100%;
   }
 
-  /*eliminar migas */
   /* Especificidad */
-  body:n-th-child(1) {
+  body:nth-child(1) {
     /*selector específico para las migas */
     display: none;
+  }
+
+  article h2 + img {
+    width: 100%;
+    height: auto;
   }
 }
