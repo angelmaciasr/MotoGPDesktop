@@ -45,7 +45,7 @@ class Carrusel {
 
   mostrarFotografias(fotos) {
     const primeraFoto = fotos[0];
-    // al hacerlo con jquery hago de dentro hacia fuera
+
     const h2 = $("<h2>").text("Imágenes del circuito de Phillip Island");
 
     const foto = $(`<img>`).attr("src", primeraFoto.media.m);
