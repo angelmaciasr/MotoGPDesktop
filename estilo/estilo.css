@@ -69,3 +69,9 @@ body:nth-child(1) {
   /* selector específico para las migas */
   font-size: 0.9rem;
 }
+
+section {
+  padding: 0.5rem;
+  border: 0.15em solid #00007F;
+}
+

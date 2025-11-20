@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/carrusel.js"></script>
+    <script src="js/noticias.js"></script>
   </head>
   <body>
     <header>
@@ -38,11 +39,17 @@
 
     <h2>Sección de Inicio</h2>
 
-    <article></article>
-
+    <main>
+      <article></article>
+    </main>
     <script>
       var carrusel = new Carrusel();
       carrusel.getFotografias();
+    </script>
+
+    <script>
+      var noticias = new Noticias();
+      noticias.buscar();
     </script>
   </body>
 </html>

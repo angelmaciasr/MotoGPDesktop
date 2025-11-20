@@ -1,0 +1,18 @@
+GUION 5:
+    -- xml2altimetria que genera svg con la altitud del circuito y xml2html que genera html con la información del circuito
+
+
+GUION 8:
+    -- terminar ejercicio 3 (meteorología)
+
+GUION 9: 
+    -- todo --> hacer ejercicio práctico
+
+GUION 10:
+    -- todo
+
+
+VALIDAR TODO
+
+
+-- contraseña api de noticias "borrardesew1"
