@@ -20,7 +20,7 @@ body {
     Tahoma, sans-serif;
   font-size: 1.15rem;
   margin: 0rem;
-  padding: 0rem 1rem;
+  padding: 1rem;
 }
 
 /* Especificidad 001, 001 */
@@ -32,7 +32,7 @@ h3 {
 
 /* Especificidad 001 */
 a {
-  color: #2a4961; /* dark purple */
+  color: #2a4961; /* blue gray */
   text-decoration: none;
 }
 
