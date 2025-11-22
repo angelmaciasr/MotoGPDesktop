@@ -8,21 +8,21 @@
     <localidad_proxima pais="Australia">Phillip Island, Victoria</localidad_proxima>
   </localizacion>
   <referencias>
-    <referencia>Circuito de Phillip Island</referencia>
-    <referencia>Phillip Island Circuit</referencia>
-    <referencia>Gran Premio de Australia de MotoGP</referencia>
+    <referencia url="https://es.wikipedia.org/wiki/Circuito_de_Phillip_Island">Circuito de Phillip Island</referencia>
+    <referencia url="https://en.wikipedia.org/wiki/Phillip_Island_Grand_Prix_Circuit">Phillip Island Circuit</referencia>
+    <referencia url="https://www.motogp.com/es/event/AUS">Gran Premio de Australia de MotoGP</referencia>
   </referencias>
   <g_fotos>
-    <foto source="../multimedia/phillip-island-circuit.jpg"
+    <foto source="phillip-island-circuit.jpg"
       alt="Vista aérea del circuito de Phillip Island">Vista aérea del circuito</foto>
-    <foto source="../multimedia/phillip-island-turn1.jpg"
+    <foto source="phillip-island-circuit-turn1.jpg"
       alt="Curva 1 del circuito de Phillip Island">Curva 1 - Gardner Straight</foto>
-    <foto source="../multimedia/phillip-island-main.jpg"
+    <foto source="phillip-island-circuit-main.jpg"
       alt="Recta principal del circuito de Phillip Island">Recta principal</foto>
   </g_fotos>
   <g_videos>
-    <video source="../multimedia/phillip-island-lap.mp4" type="video/mp4">Vuelta onboard al circuito</video>
-    <video source="../multimedia/phillip-island-lap.webm" type="video/webm">Highlights del circuito</video>
+    <video source="phillip-island-lap.mp4" type="video/mp4">Vuelta onboard al circuito</video>
+    <video source="phillip-island-lap.webm" type="video/webm">Highlights del circuito</video>
   </g_videos>
   <punto_origen>
     <longitud_origen>145.232152</longitud_origen> <!-- -38.502630, 145.232152 -->

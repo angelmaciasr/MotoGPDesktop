@@ -1,9 +1,17 @@
 GUION 5:
-    -- xml2altimetria que genera svg con la altitud del circuito y xml2html que genera html con la información del circuito
+    -- ejecutar xml2svg con circuito.xml y convertir a pdf
+
+    -- hacer imagenes y videos accesibles (meter atributos image-sm y image-m y que sean las url)
+
+    -- generar altimetria.pdf con opera
+
+
+GENERAR PDFS Y ESAS POLLADAS CON EL NUEVO ESQUEMA Y DTD Y CIRCUITOESQUEMA
+ACTUALIZAR EL XML QUE TIENE ENLAZADO EL DTD
 
 
 GUION 8:
-    -- terminar ejercicio 3 (meteorología)
+    -- preguntar si poner representar las horas o acotar
 
 GUION 9: 
     -- todo --> hacer ejercicio práctico
@@ -12,7 +20,7 @@ GUION 10:
     -- todo
 
 
-VALIDAR TODO
+VALIDAR TODO TRAS TERMINAR EL GUION 9
 
 
 -- contraseña api de noticias "borrardesew1"

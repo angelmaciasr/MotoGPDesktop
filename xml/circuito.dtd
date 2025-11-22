@@ -17,6 +17,7 @@
 
 <!ELEMENT referencias (referencia+)>
 <!ELEMENT referencia (#PCDATA)>
+<!ATTLIST referencia url CDATA #REQUIRED>
 
 <!ELEMENT g_fotos (foto+)>
 <!ELEMENT foto (#PCDATA)>

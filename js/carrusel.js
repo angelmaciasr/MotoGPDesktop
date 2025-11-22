@@ -45,13 +45,16 @@ class Carrusel {
 
   mostrarFotografias(fotos) {
     const primeraFoto = fotos[0];
+    $("article").remove(); // eliminar artículo vacío
+    const article = $("<article>");
 
     const h2 = $("<h2>").text("Imágenes del circuito de Phillip Island");
 
     const foto = $(`<img>`).attr("src", primeraFoto.media.m);
     foto.attr("alt", primeraFoto.title);
 
-    $("article").append(h2, foto);
+    article.append(h2, foto);
+    $("main").append(article);
 
     setInterval(this.cambiarFotografia.bind(this, fotos), 3000);
   }
