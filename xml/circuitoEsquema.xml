@@ -15,9 +15,9 @@
     <referencia url="https://www.motogp.com/es/event/AUS">Gran Premio de Australia de MotoGP</referencia>
   </referencias>
   <g_fotos>
-    <foto source="phillip-island-circuit.jpg" alt="Vista aérea del circuito de Phillip Island">Vista
-      aérea del circuito</foto>
-    <foto source="imagen-cuesta.jpg" alt="Mítica cuesta en bajada del circuito">Cuesta en bajada</foto>
+    <foto source="phillip-island-circuit.jpg" alt="Vista aerea del circuito de Phillip Island">Vista
+      aerea del circuito</foto>
+    <foto source="imagen-cuesta.jpg" alt="Mitica cuesta en bajada del circuito">Cuesta en bajada</foto>
     <foto source="imagen-podio.jpg"
       alt="Imagen de los tres primeros en el podio">Imagen del podio</foto>
   </g_fotos>
@@ -254,10 +254,10 @@
     </punto>
 
   </puntos_circuito>
-  <vencedor tiempo="00:37:49.571">Raúl Fernández</vencedor>
+  <vencedor tiempo="00:37:49.571">Raul Fernandez</vencedor>
   <clasificados>
-    <piloto posicion="1" puntos="545">Marc Márquez</piloto>
-    <piloto posicion="2" puntos="379">Alex Márquez</piloto>
+    <piloto posicion="1" puntos="545">Marc Marquez</piloto>
+    <piloto posicion="2" puntos="379">Alex Marquez</piloto>
     <piloto posicion="3" puntos="282">Marco Bezzechi</piloto>
   </clasificados>
 </circuito>

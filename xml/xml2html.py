@@ -36,13 +36,23 @@ def referencias(archivo, circuito):
 
 def galeriaFotos(archivo, circuito):
     fotos = circuito.findall('.//{http://www.uniovi.es}g_fotos/{http://www.uniovi.es}foto')
-    archivo.write('<h2>Galería de Fotos</h2>\n')
+    archivo.write('<h2>Galeria de Fotos</h2>\n')
     for foto in fotos:
+        archivo.write('<picture>\n')
+        # small img
+        smallImgSrc = foto.get("source").replace(".jpg","-300px.jpg")
+        archivo.write(f'<source media="(max-width: 600px)" srcset="{smallImgSrc}">\n')
+        # medium img
+        mediumImgSrc = foto.get("source").replace(".jpg","-600px.jpg")
+        archivo.write(f'<source media="(max-width: 899px)" srcset="{mediumImgSrc}">\n')
+        # default img
+        archivo.write(f'<source media="(min-width: 900px)" srcset="{foto.get("source")}">\n')
         archivo.write(f'<img src="{foto.get("source")}" alt="{foto.get("alt")}"/>\n')
+        archivo.write('</picture>\n')
 
 def galeriaVideos(archivo, circuito):
     videos = circuito.findall('.//{http://www.uniovi.es}g_videos/{http://www.uniovi.es}video')
-    archivo.write('<h2>Galería de Videos</h2>\n')
+    archivo.write('<h2>Galeria de Videos</h2>\n')
     for video in videos:
         archivo.write(f'<video controls preload="auto">\n<source src="{video.get("source")}" type="{video.get("type")}">{video.text}</video>\n')
 
@@ -96,7 +106,7 @@ def main():
 
     # localización
     localizacion_element = circuito.find('.//{http://www.uniovi.es}localizacion/{http://www.uniovi.es}localidad_proxima')
-    salida.write('<h2>Localización</h2>\n')
+    salida.write('<h2>Localizacion</h2>\n')
     salida.write(f'<p>{localizacion_element.text} ; {localizacion_element.get("pais")}</p>\n')
 
     # referencias
@@ -121,6 +131,8 @@ def main():
 
     entrada.close()
     salida.close()
+
+    print("Archivo generado correctamente: ", nombreSalida + ".html")
 
 
 if __name__ == "__main__":
