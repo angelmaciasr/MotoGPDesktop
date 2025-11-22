@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE circuito SYSTEM "circuito.dtd">
-<circuito nombre="Phillip Island Grand Prix Circuit" n_vueltas="27" patrocinador="Australian Motorcycle Grand Prix" 
+<circuito nombre="Phillip Island Grand Prix Circuit" n_vueltas="27"
+  patrocinador="Australian Motorcycle Grand Prix"
   fecha="2024-10-20" hora="14:00">
   <longitud unidad="m">4448</longitud>
   <anchura unidad="m">12</anchura>
@@ -8,80 +9,258 @@
     <localidad_proxima pais="Australia">Phillip Island, Victoria</localidad_proxima>
   </localizacion>
   <referencias>
-    <referencia url="https://www.phillipislandcircuit.com.au/">Web Oficial Circuito de Phillip Island</referencia>
-    <referencia url="hhttps://es.wikipedia.org/wiki/Circuito_de_Phillip_Island">Wikipedia del Circuito de Phillip Island</referencia>
-    <referencia url="https://www.motogp.com/es/calendar/2025/event/australia/66961f05-2454-4455-9d65-f99c49d25b17?tab=circuit-info">Gran Premio de Australia de MotoGP</referencia>
+    <referencia url="https://www.phillipislandcircuit.com.au/">Web Oficial Circuito de Phillip
+      Island</referencia>
+    <referencia url="hhttps://es.wikipedia.org/wiki/Circuito_de_Phillip_Island">Wikipedia del
+      Circuito de Phillip Island</referencia>
+    <referencia
+      url="https://www.motogp.com/es/calendar/2025/event/australia/66961f05-2454-4455-9d65-f99c49d25b17?tab=circuit-info">Gran
+      Premio de Australia de MotoGP</referencia>
   </referencias>
   <g_fotos>
-    <foto source="phillip-island-circuit.jpg" alt="Vista aérea del circuito de Phillip Island">Vista aérea del circuito</foto>
-    <foto source="phillip-island-circuit-turn1.jpg" alt="Curva 1 del circuito de Phillip Island">Curva 1 - Gardner Straight</foto>
-    <foto source="phillip-island-circuit-main.jpg" alt="Recta principal del circuito de Phillip Island">Recta principal</foto>
+    <foto source="phillip-island-circuit.jpg" alt="Vista aérea del circuito de Phillip Island">Vista
+      aérea del circuito</foto>
+    <foto source="imagen-cuesta.jpg" alt="Mítica cuesta en bajada del circuito">Cuesta en bajada</foto>
+    <foto source="imagen-podio.jpg"
+      alt="Imagen de los tres primeros en el podio">Imagen del podio</foto>
   </g_fotos>
   <g_videos>
     <video source="phillip-island-lap.mp4" type="video/mp4">Vuelta onboard al circuito</video>
     <video source="phillip-island-lap.webm" type="video/webm">Highlights del circuito</video>
   </g_videos>
   <punto_origen>
-    <longitud_origen>145.2369</longitud_origen>
-    <latitud_origen>-38.5047</latitud_origen>
+    <longitud_origen>145.232152</longitud_origen> <!-- -38.502630, 145.232152 -->
+    <latitud_origen>-38.502630</latitud_origen>
     <altitud_origen>15</altitud_origen>
   </punto_origen>
   <puntos_circuito>
-    <punto distancia="0" sector="1">
-      <longitud_punto>145.2369</longitud_punto>
-      <latitud_punto>-38.5047</latitud_punto>
-      <altitud_punto>15</altitud_punto>
-    </punto>
-    <punto distancia="0.2" sector="1">
-      <longitud_punto>145.2372</longitud_punto>
-      <latitud_punto>-38.5038</latitud_punto>
-      <altitud_punto>16</altitud_punto>
-    </punto>
-    <punto distancia="0.8" sector="1">
-      <longitud_punto>145.2398</longitud_punto>
-      <latitud_punto>-38.5012</latitud_punto>
+    <!--punto
+    1-->
+    <punto distancia="127" sector="1"> <!-- -38.506669, 145.233879-->
+      <longitud_punto>145.233879</longitud_punto>
+      <latitud_punto>-38.506669</latitud_punto>
       <altitud_punto>18</altitud_punto>
     </punto>
-    <punto distancia="1.2" sector="1">
-      <longitud_punto>145.2412</longitud_punto>
-      <latitud_punto>-38.4998</latitud_punto>
-      <altitud_punto>20</altitud_punto>
+    <!-- punto 2 -->
+    <punto distancia="127" sector="1"> <!-- -38.507124, 145.233922 -->
+      <longitud_punto>145.233922</longitud_punto>
+      <latitud_punto>-38.507124</latitud_punto>
+      <altitud_punto>19</altitud_punto>
     </punto>
-    <punto distancia="1.8" sector="1">
-      <longitud_punto>145.2431</longitud_punto>
-      <latitud_punto>-38.4989</latitud_punto>
-      <altitud_punto>22</altitud_punto>
+    <!-- punto 3 -->
+    <punto distancia="127" sector="1"> <!-- -38.507716, 145.233740-->
+      <longitud_punto>145.233740</longitud_punto>
+      <latitud_punto>-38.507716</latitud_punto>
+      <altitud_punto>21</altitud_punto>
     </punto>
-    <punto distancia="2.4" sector="2">
-      <longitud_punto>145.2458</longitud_punto>
-      <latitud_punto>-38.4976</latitud_punto>
-      <altitud_punto>25</altitud_punto>
+    <!-- punto 4 -->
+    <punto distancia="127" sector="1"> <!---38.508241,
+      145.233203-->
+      <longitud_punto>145.233203</longitud_punto>
+      <latitud_punto>-38.508241</latitud_punto>
+      <altitud_punto>24</altitud_punto>
     </punto>
-    <punto distancia="3.0" sector="2">
-      <longitud_punto>145.2482</longitud_punto>
-      <latitud_punto>-38.4967</latitud_punto>
-      <altitud_punto>28</altitud_punto>
+    <!-- punto 5 -->
+    <punto distancia="127" sector="1"> <!---38.508867,
+      145.231830-->
+      <longitud_punto>145.231830</longitud_punto>
+      <latitud_punto>-38.508867</latitud_punto>
+      <altitud_punto>27</altitud_punto>
     </punto>
-    <punto distancia="3.6" sector="2">
-      <longitud_punto>145.2501</longitud_punto>
-      <latitud_punto>-38.4958</latitud_punto>
+    <!-- punto 6 -->
+    <punto distancia="127" sector="1"> <!-- -38.509374, 145.231159-->
+      <longitud_punto>145.231159</longitud_punto>
+      <latitud_punto>-38.509374</latitud_punto>
       <altitud_punto>30</altitud_punto>
     </punto>
-    <punto distancia="4.0" sector="3">
-      <longitud_punto>145.2523</longitud_punto>
-      <latitud_punto>-38.4949</latitud_punto>
-      <altitud_punto>32</altitud_punto>
+    <!-- punto 7 -->
+    <punto distancia="127" sector="1"> <!---38.510054,
+      145.231079-->
+      <longitud_punto>145.231079</longitud_punto>
+      <latitud_punto>-38.510054</latitud_punto>
+      <altitud_punto>33</altitud_punto>
     </punto>
-    <punto distancia="4.4" sector="3">
-      <longitud_punto>145.2365</longitud_punto>
-      <latitud_punto>-38.5042</latitud_punto>
+    <!-- punto 8 -->
+    <punto distancia="127" sector="1"> <!---38.510548,
+      145.231575-->
+      <longitud_punto>145.231575</longitud_punto>
+      <latitud_punto>-38.510548</latitud_punto>
+      <altitud_punto>36</altitud_punto>
+    </punto>
+    <!-- punto 9 -->
+    <punto distancia="127" sector="1"> <!---38.510539,
+      145.232610-->
+      <longitud_punto>145.232610</longitud_punto>
+      <latitud_punto>-38.510539</latitud_punto>
+      <altitud_punto>38</altitud_punto>
+    </punto>
+    <!-- punto 10 -->
+    <punto distancia="127" sector="2"> <!---38.508031,
+      145.235511-->
+      <longitud_punto>145.235511</longitud_punto>
+      <latitud_punto>-38.508031</latitud_punto>
+      <altitud_punto>40</altitud_punto>
+    </punto>
+    <!-- punto 11 -->
+    <punto distancia="127" sector="2"> <!-- -38.507223,
+      145.235825-->
+      <longitud_punto>145.235825</longitud_punto>
+      <latitud_punto>-38.507223</latitud_punto>
+      <altitud_punto>43</altitud_punto>
+    </punto>
+    <!-- punto 12 -->
+    <punto distancia="127" sector="2"> <!-- -38.506327, 145.235739-->
+      <longitud_punto>145.235739</longitud_punto>
+      <latitud_punto>-38.506327</latitud_punto>
+      <altitud_punto>46</altitud_punto>
+    </punto>
+    <!-- punto 13 -->
+    <punto distancia="127" sector="2"> <!-- -38.504885, 145.235265 -->
+      <longitud_punto>145.235265</longitud_punto>
+      <latitud_punto>-38.504885</latitud_punto>
+      <altitud_punto>49</altitud_punto>
+    </punto>
+    <!-- punto 14 -->
+    <punto distancia="127" sector="2"> <!-- -38.504503,
+      145.235507 -->
+      <longitud_punto>145.235507</longitud_punto>
+      <latitud_punto>-38.504503</latitud_punto>
+      <altitud_punto>52</altitud_punto>
+    </punto>
+    <!-- punto 15 -->
+    <punto distancia="127" sector="2"> <!---38.504553,
+      145.235909 -->
+      <longitud_punto>145.235909</longitud_punto>
+      <latitud_punto>-38.504553</latitud_punto>
+      <altitud_punto>55</altitud_punto>
+    </punto>
+    <!-- punto 16 -->
+    <punto distancia="127" sector="2"> <!-- -38.505439, 145.236628 -->
+      <longitud_punto>145.236628</longitud_punto>
+      <latitud_punto>-38.505439</latitud_punto>
+      <altitud_punto>58</altitud_punto>
+    </punto>
+    <!-- punto 17 -->
+    <punto distancia="127" sector="2"> <!-- -38.506199, 145.236907 -->
+      <longitud_punto>145.236907</longitud_punto>
+      <latitud_punto>-38.506199</latitud_punto>
+      <altitud_punto>61</altitud_punto>
+    </punto>
+    <!-- punto 18 -->
+    <punto distancia="127" sector="2"> <!-- -38.506434, 145.237615 -->
+      <longitud_punto>145.237615</longitud_punto>
+      <latitud_punto>-38.506434</latitud_punto>
+      <altitud_punto>64</altitud_punto>
+    </punto>
+    <!-- punto 19 -->
+    <punto distancia="127" sector="2"> <!-- -38.506001, 145.238162 -->
+      <longitud_punto>145.238162</longitud_punto>
+      <latitud_punto>-38.506001</latitud_punto>
+      <altitud_punto>67</altitud_punto>
+    </punto>
+    <!-- punto 20 -->
+    <punto distancia="127" sector="2"> <!--  -38.504356, 145.238152 -->
+      <longitud_punto>145.238152</longitud_punto>
+      <latitud_punto>-38.504356</latitud_punto>
+      <altitud_punto>70</altitud_punto>
+    </punto>
+    <!-- punto 21 -->
+    <punto distancia="127" sector="2"> <!-- -38.502753, 145.237267 -->
+      <longitud_punto>145.237267</longitud_punto>
+      <latitud_punto>-38.502753</latitud_punto>
+      <altitud_punto>72</altitud_punto>
+    </punto>
+    <!-- punto 22 -->
+    <punto distancia="127" sector="3"> <!-- -38.501959, 145.237235 -->
+      <longitud_punto>145.237235</longitud_punto>
+      <latitud_punto>-38.501959</latitud_punto>
+      <altitud_punto>73</altitud_punto>
+    </punto>
+    <!-- punto 23 -->
+    <punto distancia="127" sector="3"> <!-- -38.500313, 145.238055 -->
+      <longitud_punto>145.238055</longitud_punto>
+      <latitud_punto>-38.500313</latitud_punto>
+      <altitud_punto>75</altitud_punto>
+    </punto>
+    <!-- punto 24 -->
+    <punto distancia="127" sector="3"> <!-- -38.499717, 145.238093 -->
+      <longitud_punto>145.238093</longitud_punto>
+      <latitud_punto>-38.499717</latitud_punto>
+      <altitud_punto>74</altitud_punto>
+    </punto>
+    <!-- punto 25 -->
+    <punto distancia="127" sector="3"> <!-- -38.499155, 145.237653 -->
+      <longitud_punto>145.237653</longitud_punto>
+      <latitud_punto>-38.499155</latitud_punto>
+      <altitud_punto>60</altitud_punto>
+    </punto>
+    <!-- punto 26 -->
+    <punto distancia="127" sector="3"> <!-- -38.498886, 145.236945 -->
+      <longitud_punto>145.236945</longitud_punto>
+      <latitud_punto>-38.498886</latitud_punto>
+      <altitud_punto>46</altitud_punto>
+    </punto>
+    <!-- punto 27 -->
+    <punto distancia="127" sector="3"> <!-- -38.499129, 145.234939 -->
+      <longitud_punto>145.234939</longitud_punto>
+      <latitud_punto>-38.499129</latitud_punto>
+      <altitud_punto>35</altitud_punto>
+    </punto>
+    <!-- punto 28 -->
+    <punto distancia="127" sector="3"> <!-- -38.498865, 145.234622 -->
+      <longitud_punto>145.234622</longitud_punto>
+      <latitud_punto>-38.498865</latitud_punto>
+      <altitud_punto>28</altitud_punto>
+    </punto>
+    <!-- punto 29 -->
+    <punto distancia="127" sector="4"> <!-- -38.498008, 145.235083 -->
+      <longitud_punto>145.235083</longitud_punto>
+      <latitud_punto>-38.498008</latitud_punto>
+      <altitud_punto>25</altitud_punto>
+    </punto>
+    <!-- punto 30 -->
+    <punto distancia="127" sector="4"> <!-- -38.497446, 145.234751 -->
+      <longitud_punto>145.234751</longitud_punto>
+      <latitud_punto>-38.497446</latitud_punto>
+      <altitud_punto>22</altitud_punto>
+    </punto>
+    <!-- punto 31 -->
+    <punto distancia="127" sector="4"> <!---38.497194,
+      145.233726  -->
+      <longitud_punto>145.233726</longitud_punto>
+      <latitud_punto>-38.497194</latitud_punto>
+      <altitud_punto>20</altitud_punto>
+    </punto>
+    <!-- punto 32 -->
+    <punto distancia="127" sector="4"> <!-- -38.497232, 145.232310 -->
+      <longitud_punto>145.232310</longitud_punto>
+      <latitud_punto>-38.497232</latitud_punto>
+      <altitud_punto>18</altitud_punto>
+    </punto>
+    <!-- punto 33 -->
+    <punto distancia="127" sector="4"> <!-- -38.497610, 145.231243 -->
+      <longitud_punto>145.231243</longitud_punto>
+      <latitud_punto>-38.497610</latitud_punto>
+      <altitud_punto>17</altitud_punto>
+    </punto>
+    <!-- punto 34 -->
+    <punto distancia="127" sector="4"> <!-- -38.498319, 145.230701 -->
+      <longitud_punto>145.230701</longitud_punto>
+      <latitud_punto>-38.498319</latitud_punto>
+      <altitud_punto>16</altitud_punto>
+    </punto>
+    <!-- punto 35 -->
+    <punto distancia="127" sector="4"> <!-- -38.499415, 145.230770  -->
+      <longitud_punto>145.230770</longitud_punto>
+      <latitud_punto>-38.499415</latitud_punto>
       <altitud_punto>15</altitud_punto>
     </punto>
+
   </puntos_circuito>
-  <vencedor tiempo="1:30.712">Francesco Bagnaia</vencedor>
+  <vencedor tiempo="00:37:49.571">Raúl Fernández</vencedor>
   <clasificados>
-    <piloto posicion="1" puntos="25">Francesco Bagnaia</piloto>
-    <piloto posicion="2" puntos="20">Jorge Martín</piloto>
-    <piloto posicion="3" puntos="16">Marc Márquez</piloto>
+    <piloto posicion="1" puntos="545">Marc Márquez</piloto>
+    <piloto posicion="2" puntos="379">Alex Márquez</piloto>
+    <piloto posicion="3" puntos="282">Marco Bezzechi</piloto>
   </clasificados>
 </circuito>
