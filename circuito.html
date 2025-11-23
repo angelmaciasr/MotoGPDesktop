@@ -10,6 +10,11 @@
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <link rel="icon" href="multimedia/favicon-circuito.ico" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script src="js/circuito.js"></script>
   </head>
   <body>
@@ -40,5 +45,13 @@
     </p>
 
     <h2>Sección de Circuito - Phillip Island</h2>
+
+    <main>
+      <h3>Subir archivo HTML</h3>
+      <input type="file" onchange="circuito.leerArchivoHTML(this.files)" />
+
+      <h3>Subir archivo SVG</h3>
+      <input type="file" onchange="cargadorSVG.leerArchivoSVG(this.files)" />
+    </main>
   </body>
 </html>

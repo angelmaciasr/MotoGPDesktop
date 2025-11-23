@@ -44,9 +44,9 @@ def galeriaFotos(archivo, circuito):
         archivo.write(f'<source media="(max-width: 600px)" srcset="{smallImgSrc}">\n')
         # medium img
         mediumImgSrc = foto.get("source").replace(".jpg","-600px.jpg")
-        archivo.write(f'<source media="(max-width: 899px)" srcset="{mediumImgSrc}">\n')
+        archivo.write(f'<source media="(max-width: 999px)" srcset="{mediumImgSrc}">\n')
         # default img
-        archivo.write(f'<source media="(min-width: 900px)" srcset="{foto.get("source")}">\n')
+        archivo.write(f'<source media="(min-width: 1000px)" srcset="{foto.get("source")}">\n')
         archivo.write(f'<img src="{foto.get("source")}" alt="{foto.get("alt")}"/>\n')
         archivo.write('</picture>\n')
 
@@ -62,7 +62,7 @@ def clasificados(archivo, circuito):
     archivo.write('<h2>Clasificacion tras Carrera</h2>\n')
     archivo.write('<ul>\n')
     for piloto in clasificados:
-        archivo.write(f'<li>{piloto.get("posicion")}. {piloto.text} ; {piloto.get("puntos")}puntos</li>\n')
+        archivo.write(f'<li>{piloto.get("posicion")}. {piloto.text} ({piloto.get("puntos")} puntos)</li>\n')
     archivo.write('</ul>\n')
 
 def epilogoHTML(archivo):
@@ -107,7 +107,7 @@ def main():
     # localización
     localizacion_element = circuito.find('.//{http://www.uniovi.es}localizacion/{http://www.uniovi.es}localidad_proxima')
     salida.write('<h2>Localizacion</h2>\n')
-    salida.write(f'<p>{localizacion_element.text} ; {localizacion_element.get("pais")}</p>\n')
+    salida.write(f'<p>{localizacion_element.text}; {localizacion_element.get("pais")}</p>\n')
 
     # referencias
     referencias(salida, circuito)
@@ -121,7 +121,8 @@ def main():
     # vencedor
     vencedor_element = circuito.find('.//{http://www.uniovi.es}vencedor')
     salida.write('<h2>Vencedor del Gran Premio</h2>\n')
-    salida.write(f'<p>{vencedor_element.text} ; {vencedor_element.get("tiempo")}</p>\n')
+    salida.write(f'<p>{vencedor_element.text}</p>\n')
+    salida.write(f'<p>Tiempo final - {vencedor_element.get("tiempo")}</p>\n')
 
 
     # clasificados
