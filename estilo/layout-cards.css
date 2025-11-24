@@ -15,6 +15,7 @@ main > p {
 
 @media (max-width: 799px) {
   main {
+    /* WARNING: redefinición para garantizar adaptabilidad */
     grid-template-columns: repeat(2, 1fr);
   }
 }

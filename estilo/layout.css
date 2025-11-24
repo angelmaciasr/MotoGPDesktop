@@ -23,13 +23,17 @@ nav {
 @media (min-width: 320px) and (max-width: 999px) {
   /* Especificidad 001 */
   header {
+    /* WARNING: redefinición para garantizar adaptabilidad */
     flex-direction: column;
+    /* WARNING: redefinición para garantizar adaptabilidad */
     align-items: flex-start;
   }
 
   /* Especificidad 001 */
   nav {
+    /* WARNING: redefinición para garantizar adaptabilidad */
     flex-direction: column;
+    /* WARNING: redefinición para garantizar adaptabilidad */
     align-items: flex-start;
     width: 100%;
   }

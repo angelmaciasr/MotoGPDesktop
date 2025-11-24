@@ -16,7 +16,7 @@
 body {
   background-color: #defdff; /* Baby blue */
   color: #315673; /* Midnight blue */
-  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
     Tahoma, sans-serif;
   font-size: 1.15rem;
   margin: 0rem;
@@ -27,11 +27,13 @@ body {
 h1,
 h2,
 h3 {
+  /* WARNING: Color de fondo heredado de body */
   color: #2a4961; /* Blue gray */
 }
 
 /* Especificidad 001 */
 a {
+  /* WARNING: Color de fondo heredado de body */
   color: #2a4961; /* blue gray */
   text-decoration: none;
 }
@@ -39,10 +41,12 @@ a {
 /* Especificidad 011, 011 */
 a:hover,
 a:focus {
+  /* WARNING: Color de fondo heredado de body */
   color: #821a6a; /* darker purple */
   text-decoration: underline;
 }
 a:visited {
+  /* WARNING: Color de fondo heredado de body */
   color: #911d91;
 }
 
