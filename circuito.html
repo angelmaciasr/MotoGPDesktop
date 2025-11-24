@@ -15,6 +15,10 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMwkN25yslRice93zzRjIRoYZb9k0ZtEI&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
     <script src="js/circuito.js"></script>
   </head>
   <body>
@@ -46,12 +50,13 @@
 
     <h2>Sección de Circuito - Phillip Island</h2>
 
-    <main>
-      <h3>Subir archivo HTML</h3>
-      <input type="file" onchange="circuito.leerArchivoHTML(this.files)" />
+    <h3>Subir archivo HTML</h3>
+    <input type="file" onchange="circuito.leerArchivoHTML(this.files)" />
 
-      <h3>Subir archivo SVG</h3>
-      <input type="file" onchange="cargadorSVG.leerArchivoSVG(this.files)" />
-    </main>
+    <h3>Subir archivo SVG</h3>
+    <input type="file" onchange="cargadorSVG.leerArchivoSVG(this.files)" />
+
+    <h3>Subir archivo KML</h3>
+    <input type="file" onchange="cargadorKML.leerArchivoKML(this.files)" />
   </body>
 </html>

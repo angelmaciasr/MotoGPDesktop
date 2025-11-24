@@ -30,10 +30,12 @@ class Circuito {
         Array.from(doc.body.children).forEach((node) => {
           // cambiar el srcset de las imágenes para que apunten a la carpeta xml
           if (node.nodeName === "PICTURE") {
-            const innerHtml = node.innerHTML.replaceAll(
+            var innerHtml = node.innerHTML.replaceAll(
               'srcset="',
               'srcset="xml/'
             );
+
+            innerHtml = innerHtml.replaceAll('src="', 'src="xml/');
             node.innerHTML = innerHtml;
           }
 
@@ -43,7 +45,7 @@ class Circuito {
             node.innerHTML = innerHtml;
           }
 
-          $("main").append($(node));
+          $("body").append($(node));
         });
       };
       lector.readAsText(archivo);
@@ -74,11 +76,81 @@ class CargadorSVG {
     const elementoSVG = docSVG.documentElement;
 
     const svgTitle = $("<h3>").text("SVG con Altimetría del Circuito");
-    $("main").append(svgTitle);
+    $("body").append(svgTitle);
 
-    $("main").append($(elementoSVG));
+    $("body").append($(elementoSVG));
+  }
+}
+
+class CargadorKML {
+  leerArchivoKML(files) {
+    var archivo = files[0];
+
+    var lector = new FileReader();
+    lector.onload = (e) => this.insertarCapaKML(e.target.result);
+    lector.readAsText(archivo);
+  }
+
+  insertarCapaKML(kmlContent) {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(kmlContent, "application/xml");
+
+    const data = doc.children[0].children[0].children;
+    const placemarks = Array.from(data).filter(
+      (node) => node.nodeName === "Placemark"
+    );
+
+    // console.log(placemarks[0].children[1].children[0].textContent); ===> 145.232152,-38.502630,15
+    const coordenadas =
+      placemarks[0].children[1].children[0].textContent.split(",");
+    const coordenadasInicio = new google.maps.LatLng(
+      coordenadas[1], // latitud
+      coordenadas[0] // longitud
+    );
+
+    const mapContainer = $("<div>");
+
+    var mapOptions = {
+      zoom: 14,
+      center: coordenadasInicio,
+      mapId: "myMap",
+    };
+    const mapa = new google.maps.Map(mapContainer[0], mapOptions);
+
+    // marcador
+    const marcadorInicio = new google.maps.marker.AdvancedMarkerElement({
+      position: coordenadasInicio,
+      map: mapa,
+      title: placemarks[0].children[0].textContent,
+    });
+
+    // poliínea
+
+    var coordsPath = [];
+    for (let i = 0; i < placemarks.length; i++) {
+      const coords =
+        placemarks[i].children[1].children[0].textContent.split(",");
+
+      coordsPath.push({
+        lat: parseFloat(coords[1]), // latitud
+        lng: parseFloat(coords[0]), // longitud
+      });
+    }
+
+    const polyline = new google.maps.Polyline({
+      path: coordsPath,
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2,
+    });
+
+    polyline.setMap(mapa);
+
+    $("body").append(mapContainer);
   }
 }
 
 const circuito = new Circuito();
 const cargadorSVG = new CargadorSVG();
+const cargadorKML = new CargadorKML();
