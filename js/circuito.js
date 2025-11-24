@@ -111,7 +111,7 @@ class CargadorKML {
     const mapContainer = $("<div>");
 
     var mapOptions = {
-      zoom: 14,
+      zoom: 15,
       center: coordenadasInicio,
       mapId: "myMap",
     };
@@ -127,15 +127,23 @@ class CargadorKML {
     // poliínea
 
     var coordsPath = [];
-    for (let i = 0; i < placemarks.length; i++) {
-      const coords =
-        placemarks[i].children[1].children[0].textContent.split(",");
+    var meanLat = 0;
+    var meanLng = 0;
+    Array.from(placemarks).forEach((pm) => {
+      const coords = pm.children[1].children[0].textContent.split(",");
+
+      meanLat += parseFloat(coords[1]);
+      meanLng += parseFloat(coords[0]);
 
       coordsPath.push({
         lat: parseFloat(coords[1]), // latitud
         lng: parseFloat(coords[0]), // longitud
       });
-    }
+    });
+
+    meanLat /= placemarks.length;
+    meanLng /= placemarks.length;
+    mapa.setCenter(new google.maps.LatLng(meanLat, meanLng));
 
     const polyline = new google.maps.Polyline({
       path: coordsPath,
