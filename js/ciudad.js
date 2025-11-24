@@ -95,7 +95,6 @@ class Ciudad {
 
     section.append(diary);
 
-    const hourlyList = $("<ul>");
     // hourly info
     for (let i = 0; i < data.hourly.time.length; i += 1) {
       const hora = $("<ul>").html(`
@@ -109,10 +108,9 @@ class Ciudad {
       const hourlyTitle = data.hourly.time[i].split("T");
       const dayTitle = hourlyTitle[0].replace("-", "/");
       const title = $("<h5>").text(`${dayTitle} - ${hourlyTitle[1]}`);
-      hora.prepend(title);
-      hourlyList.append(hora);
+      section.append(title);
+      section.append(hora);
     }
-    section.append(hourlyList);
     $("body").append(section);
   }
 
@@ -138,8 +136,6 @@ class Ciudad {
   }
 
   procesarJSONEntrenos(data) {
-    console.log(data);
-
     const mediaRain =
       data.hourly.rain.reduce((a, b) => a + b, 0) / data.hourly.rain.length;
 

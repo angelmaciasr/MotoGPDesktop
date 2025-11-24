@@ -64,8 +64,10 @@
 
       //info adicional
       const infoAdicional = document.createElement("p");
-      infoAdicional.innerHTML = `Información adicional: ${ciudad.getCityAdditionalInfo()}`;
+      infoAdicional.innerHTML = `Información adicional:`;
       document.body.appendChild(infoAdicional);
+
+      document.body.innerHTML += ciudad.getCityAdditionalInfo();
 
       ciudad.writeCityCoords();
 
