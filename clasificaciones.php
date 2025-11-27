@@ -1,3 +1,37 @@
+<?php
+
+class Clasificaciones {
+
+    public function __construct() {
+        $this->documentos = "xml/circuitoEsquema.xml";
+    }
+
+    public function consultar(){
+      $datos = file_get_contents($this->documentos);
+      if ($datos === false) {
+          throw new Exception("No se pudo leer el archivo XML.");
+      }
+
+      //convertir a objeto xml
+      $xml = new SimpleXMLElement($datos);
+
+      echo "<h3>Vencedor de " . $xml['nombre'] . "</h3>";
+      echo "<p><strong>" . $xml->vencedor . "</strong> - Tiempo: " . $xml->vencedor['tiempo'] . "</p>";
+
+      echo "<h3>Clasificación</h3>";
+      echo "<ol>";
+      foreach ($xml->clasificados->piloto as $piloto) {
+          echo "<li>" . $piloto . " - " . $piloto['puntos'] . " puntos</li>";
+      }
+      echo "</ol>";
+    }
+}
+
+$clasificaciones = new Clasificaciones();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -23,7 +57,7 @@
           >Meteorología</a
         >
         <a
-          href="clasificaciones.html"
+          href="clasificaciones.php"
           title="Clasificaciones actuales"
           class="active"
           >Clasificaciones</a
@@ -39,6 +73,10 @@
 
     <h2>Sección de Clasificaciones</h2>
 
-    <p>En desarrollo</p>
+    <main>
+      <?php
+        $clasificaciones->consultar();
+      ?>
+    </main>
   </body>
 </html>
