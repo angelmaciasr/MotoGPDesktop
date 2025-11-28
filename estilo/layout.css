@@ -36,6 +36,7 @@ header button {
 
   /* Especificidad 002 */
   header button {
+    /* WARNING: redefinición para garantizar adaptabilidad */
     display: block;
   }
 
