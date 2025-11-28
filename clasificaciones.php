@@ -18,7 +18,8 @@ class Clasificaciones {
       echo "<h3>Vencedor de " . $xml['nombre'] . "</h3>";
       echo "<p><strong>" . $xml->vencedor . "</strong> - Tiempo: " . $xml->vencedor['tiempo'] . "</p>";
 
-      echo "<h3>Clasificación</h3>";
+      echo "<h3>Clasificación del Mundial tras la Carrera</h3>";
+
       echo "<ol>";
       foreach ($xml->clasificados->piloto as $piloto) {
           echo "<li>" . $piloto . " - " . $piloto['puntos'] . " puntos</li>";

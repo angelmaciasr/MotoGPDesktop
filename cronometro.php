@@ -24,9 +24,9 @@ class Cronometro {
         $tiempo_total = $this->tiempo;
         $minutos = floor($tiempo_total / 60);
         $segundos = floor($tiempo_total) % 60;
-        $milisegundos = round(($tiempo_total - floor($tiempo_total)) * 1000);
+        $decimas = round(($tiempo_total - floor($tiempo_total)) * 10);
 
-        echo "Tiempo transcurrido --> " . str_pad($minutos, 2, "0", STR_PAD_LEFT) . ":" . str_pad($segundos, 2, "0", STR_PAD_LEFT) . "." . str_pad($milisegundos, 3, "0", STR_PAD_LEFT);
+        echo "Tiempo transcurrido --> " . str_pad($minutos, 2, "0", STR_PAD_LEFT) . ":" . str_pad($segundos, 2, "0", STR_PAD_LEFT) . "." . $decimas;
     }
 }
 
