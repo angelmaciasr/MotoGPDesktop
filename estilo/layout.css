@@ -19,6 +19,11 @@ nav {
   justify-content: space-between;
 }
 
+/* Especificidad 002 */
+header button {
+  display: none;
+}
+
 /* Adaptación a pantallas pequeñas */
 @media (min-width: 320px) and (max-width: 999px) {
   /* Especificidad 001 */
@@ -27,6 +32,12 @@ nav {
     flex-direction: column;
     /* WARNING: redefinición para garantizar adaptabilidad */
     align-items: flex-start;
+  }
+
+  /* Especificidad 002 */
+  header button {
+    /* WARNING: redefinición para garantizar adaptabilidad */
+    display: block;
   }
 
   /* Especificidad 001 */
