@@ -1,0 +1,64 @@
+CAMBIOS EN LAS RESTRICCIONES DE DATOS: circuito.dtd → circuito.xsd
+===================================================================
+
+1. TIPOS DE DATOS ESPECIFICADOS
+--------------------------------
+Los siguientes campos ahora tienen tipos de datos específicos:
+
+Atributos del circuito:
+- n_vueltas: debe ser un número entero
+- fecha: debe ser una fecha válida (formato YYYY-MM-DD)
+- hora: debe ser una hora válida (formato HH:MM:SS)
+
+Medidas del circuito:
+- longitud: debe ser un número decimal
+- anchura: debe ser un número decimal
+
+Coordenadas (origen y puntos):
+- longitud_origen, latitud_origen, altitud_origen: números decimales
+- longitud_punto, latitud_punto, altitud_punto: números decimales
+
+Datos de puntos del circuito:
+- distancia: debe ser un número decimal
+- sector: debe ser un número entero
+
+Datos de clasificación:
+- posicion: debe ser un número entero
+- puntos: debe ser un número entero
+
+Tiempo del vencedor:
+- tiempo: debe ser una duración válida (formato ISO 8601, ej: PT1H23M45S)
+
+2. RESTRICCIONES DE CANTIDAD
+-----------------------------
+Se han establecido límites específicos en el número de elementos:
+
+REFERENCIAS:
+- Antes: mínimo 1 referencia
+- Ahora: mínimo 3 referencias (sin límite máximo)
+
+FOTOS:
+- Antes: mínimo 1 foto
+- Ahora: entre 1 y 5 fotos (máximo 5)
+
+VIDEOS:
+- Antes: mínimo 1 video
+- Ahora: entre 1 y 3 videos (máximo 3)
+
+PILOTOS CLASIFICADOS:
+- Antes: mínimo 1 piloto
+- Ahora: exactamente 3 pilotos (no más, no menos)
+
+3. NAMESPACE AÑADIDO
+--------------------
+- Los documentos XML ahora deben usar el namespace: http://www.uniovi.es
+
+4. RESUMEN DE CAMBIOS PRINCIPALES
+----------------------------------
+✓ Mayor control sobre los tipos de datos numéricos
+✓ Validación automática de fechas y horas
+✓ Límite máximo de 5 fotos
+✓ Límite máximo de 3 videos
+✓ Requerimiento de al menos 3 referencias
+✓ Requerimiento de exactamente 3 pilotos clasificados
+✓ Validación del formato de duración para el tiempo del vencedor

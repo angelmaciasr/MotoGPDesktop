@@ -54,12 +54,27 @@
     <h2>Sección de Circuito - Phillip Island</h2>
 
     <h3>Subir archivo HTML</h3>
-    <input type="file" onchange="circuito.leerArchivoHTML(this.files)" />
+    <label for="htmlFile">Selecciona un archivo HTML:</label>
+    <input
+      type="file"
+      id="htmlFile"
+      onchange="circuito.leerArchivoHTML(this.files)"
+    />
 
     <h3>Subir archivo SVG</h3>
-    <input type="file" onchange="cargadorSVG.leerArchivoSVG(this.files)" />
+    <label for="svgFile">Selecciona un archivo SVG:</label>
+    <input
+      type="file"
+      id="svgFile"
+      onchange="cargadorSVG.leerArchivoSVG(this.files)"
+    />
 
     <h3>Subir archivo KML</h3>
-    <input type="file" onchange="cargadorKML.leerArchivoKML(this.files)" />
+    <label for="kmlFile">Selecciona un archivo KML:</label>
+    <input
+      type="file"
+      id="kmlFile"
+      onchange="cargadorKML.leerArchivoKML(this.files)"
+    />
   </body>
 </html>

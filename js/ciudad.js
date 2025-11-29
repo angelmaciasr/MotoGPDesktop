@@ -107,7 +107,7 @@ class Ciudad {
       `);
       const hourlyTitle = data.hourly.time[i].split("T");
       const dayTitle = hourlyTitle[0].replace("-", "/");
-      const title = $("<h5>").text(`${dayTitle} - ${hourlyTitle[1]}`);
+      const title = $("<h4>").text(`${dayTitle} - ${hourlyTitle[1]}`);
       section.append(title);
       section.append(hora);
     }

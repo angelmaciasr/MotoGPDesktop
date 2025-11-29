@@ -50,10 +50,14 @@ $cronometro = $_SESSION['cronometro'];
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <link rel="icon" href="multimedia/favicon-juegos.ico" />
+    <script src="js/mobile_menu.js"></script>
+
   </head>
   <body>
     <header>
       <h1><a href="index.html">MotoGP Desktop</a></h1>
+
+      <button onclick="menu.showMenu()">☰</button> 
 
       <nav>
         <a href="index.html" title="Página de inicio">Inicio</a>
@@ -74,8 +78,11 @@ $cronometro = $_SESSION['cronometro'];
 
     <main>
       <form method="POST">
+        <label for="iniciar" class="button">Iniciar el cronómetro</label>
         <input type='submit' class='button' name='iniciar' value='Iniciar'/>
+        <label for="parar" class="button">Parar el cronómetro</label>
         <input type='submit' class='button' name='parar' value='Parar'/>
+        <label for="mostrar" class="button">Mostrar el cronómetro</label>
         <input type='submit' class='button' name='mostrar' value='Mostrar'/>
       </form>
 
